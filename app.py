@@ -18,7 +18,6 @@ n_layer: int = 101
 dropout_rate: float = 0.312516596075442
 learnrate: float = 0.0009910923438815737
 weight_decay: float = 0.0002464037290977692
-epochs: int = 47
 batch_size: int = 43
 model = MyNN(
         no_convs=no_convs,
@@ -32,7 +31,7 @@ model = MyNN(
         out_dim=10,
     )
 model = model.to(device)  # initialize architecture
-model.load_state_dict(torch.load("models/my_model_weights.pth", map_location=torch.device("cpu")))
+model.load_state_dict(torch.load("modelsaved/my_model_weights.pth", map_location=torch.device("cpu")))
 
 
 model.eval()
